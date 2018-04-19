@@ -23,6 +23,8 @@ We chose to use a doubly linked node based implementation of Deque, to keep the 
 5) Implement all remove methods, test with test cases
 
 ### Development Plan
+1) Determine runtimes of all the methods we're implementing using different architecture
+2) Begin developing
 
 
 
