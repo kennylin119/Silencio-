@@ -1,12 +1,12 @@
-public interface Deque <D>
+public interface Deque<T>
 {
     public T getFirst();
 
     public T getLast();
     
-    public void addtFirst();
+    public void addFirst(T item);
     
-    public void addLast();
+    public void addLast(T item);
     
     public T removeFirst(); 
     
