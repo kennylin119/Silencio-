@@ -10,13 +10,18 @@ public class QQKachoo<T> implements Deque<T>
 	_end = new DLLNode<T>(null, null,null);
 	_size = 0;
     }
-    
+
+    //receive first method without removing
     public T getFirst() {
 	return _front.getCargo();
     }
+
+    //receive last method without removing
     public T getLast(){
 	return _end.getCargo();
     }
+
+    //"pushing" to the start of the deck
     public void addFirst(T item) {
 	if ( _size == 0 ) {
 	    _front = _end = new DLLNode<T>(item, null, null);
@@ -30,6 +35,7 @@ public class QQKachoo<T> implements Deque<T>
 	_size++;
     }
 
+    //"pushing" to the end of the deck
     public void addLast(T item){
 	if ( _size == 0 ) {
 	    _front = _end = new DLLNode<T>(item, null, null);
@@ -43,6 +49,7 @@ public class QQKachoo<T> implements Deque<T>
 	_size++;
     }
 
+    //returns and removes first element from deque
     public T removeFirst(){
 	T ret = _front.getCargo();
 	_front = _front.getPrev();
@@ -50,7 +57,8 @@ public class QQKachoo<T> implements Deque<T>
 	_size--;
 	return ret;
     }
-    
+
+    //returns and removes last element from deque
     public T removeLast(){
 	T ret = _end.getCargo();
 	_end = _end.getNext();
